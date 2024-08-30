@@ -1,8 +1,40 @@
+body{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+nav{
+    margin: 0 auto;
+    position: absolute;
+    top: 15px;
+    width: 100%;
+    /* Define a largura máxima do nav para 1480 pixels */
+    min-width: 1200px;
+    /* Define a largura mínima do nav para 1080 pixels */
+    
+}
+nav #main-menu-geral{
+    max-width: 1480px;
+    height: 125px;
+    /* Define a altura do elemento de navegação (nav) como 125 pixels */
+    margin: 0 auto;
+    background-color: black;
+    /* Define a cor de fundo do nav como preto */
+    
+   
+
+}
+
 nav ul{
     display:flex;
     /* Define que os itens da lista serão exibidos em um layout flexível */
     flex-direction:row;
     /* Organiza os itens da lista em uma linha horizontal */
+    margin: 0;
+    /* Remove todas as margens externas do elemento, fazendo com que não haja espaço ao redor do elemento fora de suas bordas */
+    padding: 0;
+     /* Remove todo o preenchimento interno do elemento, garantindo que não haja espaço entre o conteúdo do elemento e suas bordas */
 }
 nav ul li{
     list-style: none;
@@ -10,19 +42,39 @@ nav ul li{
     height: 125px;
     padding: 0 25px 0 0;
 }
-nav uç li:hover{
+nav li:hover{
     background: #444444;
+    transition: all 1s;
 }
-nav{
-    height: 125px;
-    /* Define a altura do elemento de navegação (nav) como 125 pixels */
-    max-width: 1480px;
-    /* Define a largura máxima do nav para 1480 pixels */
-    min-width: 1080px;
-    /* Define a largura mínima do nav para 1080 pixels */
-    background-color: black;
-    /* Define a cor de fundo do nav como preto */
+nav ul li span{
+    float: left;
+    color: #868686;
+    font-size: 11px;
+    margin: 58px 3px 53px 25px;
+    transition: all 1s;
 }
+nav ul li a{
+    color: #fff;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 53px 25px 53px 0;
+    float: left;
+}
+nav ul li a:hover{
+    text-decoration: line-through;
+    color: rgb(231, 169, 32);
+    transition: all 1s;
+}
+nav ul li a:hover span{
+    text-decoration: none;
+}
+nav ul li a span{
+    color: #868686;
+    font-size: 11px;
+    margin: 5px 3px 0 0;
+}
+
 nav #logo img{
     height: 75px;
     /* Define a altura da imagem dentro da div com id "logo" como 75 pixels */
@@ -34,4 +86,15 @@ nav #logo img{
 nav #mainMenu{
     float: right;
     /* Alinha o elemento com id "mainMenu" à direita do elemento pai (navegação) */
+}
+.montserrat, nav ul li a{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header img{
+    width: 100%;
+    height: 600px;
 }
