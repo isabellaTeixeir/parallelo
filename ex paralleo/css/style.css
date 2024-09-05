@@ -1,100 +1,122 @@
-body{
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
+body {
+    margin: 0;/* Remove as margens padrão da página */
+    padding: 0; /* Remove o preenchimento padrão da página */
+    width: 100%;/* Define a largura do corpo como 100% da tela */
+    height: 100%;/* Define a altura do corpo como 100% da tela */
 }
-nav{
+nav {  /*Estilização do menu em geral*/
     margin: 0 auto;
-    position: absolute;
-    top: 15px;
-    width: 100%;
-    /* Define a largura máxima do nav para 1480 pixels */
-    min-width: 1200px;
-    /* Define a largura mínima do nav para 1080 pixels */
-    
+    position: absolute;/* Posiciona o menu de forma absoluta em relação ao primeiro elemento posicionado */
+    top: 15px;/* Define a posição superior do menu a 15px do topo */
+    width: 100%;/* Define a largura do menu como 100% da tela */
+    min-width: 1080px; /* Define uma largura mínima para o menu de 1080px */
 }
-nav #main-menu-geral{
-    max-width: 1480px;
-    height: 125px;
-    /* Define a altura do elemento de navegação (nav) como 125 pixels */
-    margin: 0 auto;
-    background-color: black;
-    /* Define a cor de fundo do nav como preto */
-    
-   
-
+nav #main-menu-geral {
+    max-width: 1480px;/* Define a largura máxima do menu principal como 1480px */
+    height: 125px;/* Define a altura do menu principal como 125px */
+    margin: 0 auto;/* Centraliza o menu */
+    background-color: black;/* Define a cor de fundo como preta */
 }
-
-nav ul{
-    display:flex;
-    /* Define que os itens da lista serão exibidos em um layout flexível */
-    flex-direction:row;
-    /* Organiza os itens da lista em uma linha horizontal */
-    margin: 0;
-    /* Remove todas as margens externas do elemento, fazendo com que não haja espaço ao redor do elemento fora de suas bordas */
-    padding: 0;
-     /* Remove todo o preenchimento interno do elemento, garantindo que não haja espaço entre o conteúdo do elemento e suas bordas */
+nav ul li span {
+    float: left; /* Alinha o texto à esquerda */
+    color: #868686;/* Define a cor do texto como um cinza claro */
+    font-size: 11px;/* Define o tamanho da fonte como 11px */
+    margin: 58px 3px 53px 15px;/* Define as margens ao redor do texto */
 }
-nav ul li{
-    list-style: none;
-    /* Remove os marcadores padrão da lista, como pontos ou números */
-    height: 125px;
-    padding: 0 25px 0 0;
-}
-nav li:hover{
-    background: #444444;
-    transition: all 1s;
-}
-nav ul li span{
-    float: left;
-    color: #868686;
-    font-size: 11px;
-    margin: 58px 3px 53px 25px;
-    transition: all 1s;
-}
-nav ul li a{
-    color: #fff;
+nav ul li a {
+    color: #ffffff;
     font-size: 16px;
     text-transform: uppercase;
     text-decoration: none;
-    padding: 53px 25px 53px 0;
+    padding: 53px 15px 53px 0px;
     float: left;
+    transition: all 1s;
 }
-nav ul li a:hover{
+nav ul li a:hover {
     text-decoration: line-through;
     color: rgb(231, 169, 32);
     transition: all 1s;
 }
-nav ul li a:hover span{
+nav ul li a span {
+    font-size: 11px;
+    color: #868686; 
+    margin: 5px 3px 0 0;
     text-decoration: none;
 }
-nav ul li a span{
-    color: #868686;
-    font-size: 11px;
-    margin: 5px 3px 0 0;
+nav ul {  /*Estilização da lista do menu*/
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
 }
-
-nav #logo img{
+nav ul li {  /*Estilização dos elementos da lista do menu*/
+    list-style: none;
+    height: 125px;
+    transition: all 1s;
+}
+nav ul li:hover {
+    background: #444444;
+    transition: all 1s;/* Aplica uma transição suave de 1 segundo */
+}
+nav #logo img {  /*Estilização da imagem de logo do menu*/
     height: 75px;
-    /* Define a altura da imagem dentro da div com id "logo" como 75 pixels */
     margin: 25px;
-    /* Adiciona uma margem de 25 pixels em torno da imagem, afastando-a dos outros elementos */
     float: left;
-    /* Alinha o elemento com id "mainMenu" à direita. Nota: há um erro de digitação aqui, a propriedade correta é 'float: right;' */
 }
-nav #mainMenu{
+nav #main-menu {  /*Estilização da imagem do menu*/
     float: right;
-    /* Alinha o elemento com id "mainMenu" à direita do elemento pai (navegação) */
 }
-.montserrat, nav ul li a{
+.montserrat, nav ul li a {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
 }
-
-header img{
+header{
     width: 100%;
     height: 600px;
+}
+header .slide {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;/* Cobre toda a área da imagem mantendo sua proporção */
+    position: absolute;
+    z-index: -1;/* Define a camada da imagem atrás dos outros elementos */
+}
+header #slide-bar {
+    margin-top: 320px;
+    height: 280px;
+    float: left;
+    background-image: url(../img/yellow-bg.png);
+    width: 625px;
+    padding: 0 0 0 60px;
+}
+
+header #txt_slide{
+    font-family:  "Montserrat", sans-serif;
+    font-size: 14px;
+    margin-top: 50px;
+    color: white;
+    text-transform: uppercase;/* Transforma o texto em letras maiúsculas */
+}
+header #titulo_slide{
+    font-size: 50px;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+
+}
+header #titulo_slide h4{
+    margin: 30px 0;
+}
+header .seta{
+    float: left;
+}
+header .direita{
+    margin-left:20px ;
+}
+.separador{
+    width: 100%;
+    height: 300px;
+    background-image: url(../img/divider-dark.png);
+    background-repeat: repeat-x;
 }

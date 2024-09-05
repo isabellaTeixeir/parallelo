@@ -1,79 +1,87 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-    <!-- Tag inicial do documento HTML. Atributo 'lang' especifica o idioma principal do conteúdo (português do Brasil) -->
+<html lang = "pt-br"> <!-- Define o documento como HTML5 e especifica que o idioma principal da página é o português do Brasil -->
     <head>
-        <!-- Seção head contém meta-informações sobre o documento -->
-        <meta charset="UTF-8">
-        <!-- Define a codificação de caracteres como UTF-8, garantindo que caracteres especiais sejam exibidos corretamente -->
-        <meta name="viewport" content="width-device-width,initial-scale=1.0">
-        <!-- Define o viewport para garantir que a página seja exibida corretamente em dispositivos móveis, ajustando a escala inicial -->
-        <title>Parallelo Arquitetura e Construção</title>
-        <!-- Define o título da página que será exibido na aba do navegador -->
-        <link rel="stylesheet" href="css/style.css">
-        <!-- Link para o arquivo de estilos CSS externo, que define o estilo visual da página -->
-         <link rel="preconnect" href="https://fonts.googleapis.com">
-         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-         <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <meta charset = "UTF-8">  <!--Define a coleção dos elementos brasileiros (como acentos...)-->
+        <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">  <!--Reconhece o tamanho da tela-->  
+
+        <title> Parallelo Arquitetura e Construção </title>
+
+        <link rel = "stylesheet" href = "css/style.css">  <!--Lembre-se sempre de colocar o arquivo css dentro de uma pasta, pois é o que aparece no comando "css/"-->
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
     </head>
     <body>
-        <!-- Link para o arquivo de estilos CSS externo, que define o estilo visual da página -->
         <nav>
-            <!-- Elemento de navegação que geralmente contém links para diferentes partes do site -->
-             <div id="main-menu-geral">
-            <div id="logo">
-                <!-- Div para o logotipo do site -->
-                <a href="index.html">
-                    <!-- Link para a página inicial do site -->
-                 <img src="img/logo-white.png">
-                 <!-- Imagem do logotipo. O caminho aponta para o diretório 'img' -->
-                </a>
-            <div id="mainMenu">
-                <!-- Div para o menu principal. Nota: esta div parece estar aberta, mas não contém conteúdo e não é fechada, podendo ser um erro -->
-            <ul>
-                <!-- Lista não ordenada para os itens do menu de navegação -->
-                <li>
-                    <span>01.</span>
-                    <a href="#">Home</a>
-        <!-- Link para a página inicial (placeholder com '#') -->
-                </li>
-                <li>
-                    <span>02.</span>
-                    <a href="#">Trabalhos</a>
-                </li>
-                <li>
-                    <span>03.</span>
-                    <a href="#">Scaneamento</a>
-                </li>
-                <li>
-                    <span>04.</span>
-                    <a href="#">Sobre</a>
-                </li>
-                <li>
-                    <span>05.</span>
-                    <a href="#">Lançamentos</a>
-                </li>
-                <li>
-                    <span>06.</span>
-                    <a href="#">Contato</a>
-                </li>
-            </ul>  
-        </div>
-    </div>
-             </div>
-        </nav>
-        <header>
-             <!-- Seção de cabeçalho da página -->
-            <img src="img/slidebg1.jpg" width="100%">
-             <!-- Seção de cabeçalho da página -->
-              <div id="slide-bar">
-                <h4>Lean Production</h4>
-                <img src="img/yellow-bg.png">
-                <div class="seta direita">
-                    <a href="#">
-                        <img scr="img/arrow-right.png">
+            <div id = "main-menu-geral">
+                <div id = "logo">  <!--Cria um ID para a imagem que está de logo no cabeçalho-->
+                    <a href = "index.html">
+                        <img src = "img/logo-white.png">  <!--Tudo que vem antes do "/" significa que está selecionando algumma pasta em específico. Nesse caso, selecionamos a imagem que está dentro da pasta "img"-->
                     </a>
                 </div>
-              </div>
+                <div id = "main-menu">  <!--Cria um ID específio para selecionar todo o menu de navegação-->
+                    <ul>  <!--Adciona uma lista que terão os elemntos do menu de navegação-->
+                        <li><!-- Item de lista -->
+                            <span>01.</span><!-- Numeração do item -->
+                            <a href = "#"> Home </a><!-- Link para a página inicial -->
+                        </li>
+                        <li> 
+                            <span>02.</span>                           
+                            <a href = "#"> Trabalhos </a>
+                        </li>
+                        <li> 
+                            <span>03.</span>                           
+                            <a href = "#"> Escaneamento </a>
+                        </li>
+                        <li> 
+                            <span>04.</span>                           
+                            <a href = "#"> Sobre </a>
+                        </li>
+                        <li> 
+                            <span>05.</span>                           
+                            <a href = "#"> Lançamentos </a>
+                        </li>
+                        <li> 
+                            <span>06.</span>                           
+                            <a href = "#"> Contato </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <header>
+            <img class = "slide" src = "img/slidebg1.jpg" width = "100%">  <!--Adiciona a imagem do helicóptero-->
+                <div id = "slide-bar"><!-- Cria uma barra de controle para a apresentação de slides -->
+                    <div id="txt_slide"><!-- Texto descritivo sobre o slide -->
+                         Projeto
+                    </div>
+                    <div id="titulo_slide"><!-- Título do slide -->
+                        <h4>Lean Production</h4>
+                    </div>
+                    <div class = "seta esquerda"><!-- Cria uma seta para navegar para o slide anterior -->
+                        <a href = "#">
+                            <img src = "img/arrow-left.png"><!-- Exibe a imagem de seta para a esquerda, encontrada na pasta "img" -->
+                        </a>
+                    </div>
+                    <div class = "seta direita"><!-- Cria uma seta para navegar para o próximo slide -->
+                        <a href = "#">
+                            <img src = "img/arrow-right.png"><!-- Exibe a imagem de seta para a direita, encontrada na pasta "img" -->
+                        </a>
+                    </div>
+                </div>
         </header>
+    
+        <div class="separador">
+
+        </div>
+        <div class="icones">
+            <img src="img/school-material.png">
+            <img src="img/triangular-ruler.png">
+            <img src="img/cup.png">
+        </div>
     </body>
 </html>
+
+
